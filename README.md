@@ -1,23 +1,10 @@
-# AppActionLoggerDemo
+# RoboCrusher
 
-Simple Angular 18 app for demoing user action event logging.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+All robots drain energy when they move or get moved (including yours).
+When a robot runs out of energy they break down.
+Push faulty (red) robots to drains their energy.
+Push faulty robots into scrapper box to scrap them and take their energy.
+You can jump the edge of the map for free.
+You cannot jump to occupied cells.
+You cannot push walls.
+You can stock up as much energy as you can obtain.
