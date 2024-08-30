@@ -1,0 +1,24 @@
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" placeholder="Enter your username">
+    <mat-error *ngIf="signInForm.get('username')?.invalid && signInForm.get('username')?.touched">
+      <ng-container *ngIf="signInForm.get('username')?.errors?.['required']">Username is required</ng-container>
+      <ng-container *ngIf="signInForm.get('username')?.errors?.['minlength']">Username must be at least 4 characters long</ng-container>
+      <ng-container *ngIf="signInForm.get('username')?.errors?.['pattern']">Username can only contain letters and numbers separated by dash or dot.</ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" type="password" placeholder="Enter your password">
+    <mat-error *ngIf="signInForm.get('password')?.invalid && signInForm.get('password')?.touched">
+      <ng-container *ngIf="signInForm.get('password')?.errors?.['required']">Password is required</ng-container>
+      <ng-container *ngIf="signInForm.get('password')?.errors?.['minlength']">Password must be at least 4 characters long</ng-container>
+    </mat-error>
+  </mat-form-field>
+
+  <div fxLayout="row" fxLayoutAlign="end center" class="full-width">
+    <button mat-raised-button color="primary" type="submit" [disabled]="signInForm.invalid">Sign In</button>
+  </div>
+</form>

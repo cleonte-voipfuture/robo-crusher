@@ -1,0 +1,33 @@
+
+<div class="game-menu-bar" (keydown)="handleKeydown($event)" tabindex="0">
+  @if (!gameEngine.countPlayerRobots()) {
+  <button mat-raised-button color="primary" (click)="startGame()"
+    matTooltip="Spawn your robot to begin the game!">Spawn Robot to Start Game</button>
+  }
+</div>
+
+<app-grid-map></app-grid-map>
+
+<div class="action-bar" (keydown)="handleKeydown($event)" tabindex="0">
+  <div fxLayout="row" fxLayoutAlign="center center" class="full-width">
+    @if (gameEngine.countPlayerRobots()) {
+      <button mat-raised-button color="primary"
+        (click)="moveSelf(Cardinal.West)"
+        matTooltip="Move left (West) | -1 power">
+        <mat-icon>arrow_back</mat-icon>W
+      </button>
+      <button mat-raised-button color="primary" (click)="moveSelf(Cardinal.North)"
+        matTooltip="Move up (North) | -1 power">
+        <mat-icon>arrow_upward</mat-icon>N
+      </button>
+      <button mat-raised-button color="primary" (click)="moveSelf(Cardinal.South)"
+        matTooltip="Move down (South) | -1 power">
+        <mat-icon>arrow_downward</mat-icon>S
+      </button>
+      <button mat-raised-button color="primary" (click)="moveSelf(Cardinal.East)"
+        matTooltip="Move right (East) | -1 power">
+        <mat-icon>arrow_forward</mat-icon>E
+      </button>
+    }
+  </div>
+</div>
