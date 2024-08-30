@@ -8,3 +8,4 @@
 - You cannot jump to occupied cells.
 - You cannot push walls.
 - You can stock up as much energy as you can obtain.
+- You can throw yourself in the scrapper box to skip impossible levels.
