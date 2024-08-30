@@ -1,5 +1,8 @@
 # RoboCrusher
 
+Play at: https://cleonte-voipfuture.github.io/robo-crusher/
+Enter any username + password (4+ chars) it does not matter and they are not persisted.
+
 - All robots drain energy when they move or get moved (including yours).
 - When a robot runs out of energy they break down.
 - Push faulty (red) robots to drains their energy.
