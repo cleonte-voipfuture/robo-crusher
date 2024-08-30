@@ -191,7 +191,7 @@ export const GameEventsQueue = {
   providedIn: 'root'
 })
 export class GameEngineService {
-  private readonly defaultRobotPower= 9;
+  private readonly defaultRobotPower= 12;
   private gridData = {
     colCount: 0,
     rowCount: 0,
